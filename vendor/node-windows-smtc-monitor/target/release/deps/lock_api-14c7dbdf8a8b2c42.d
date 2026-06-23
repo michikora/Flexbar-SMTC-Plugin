@@ -1,0 +1,10 @@
+D:\Projects Files\Node Projects\FlexPlugin\smtcPlugin\vendor\node-windows-smtc-monitor\target\release\deps\lock_api-14c7dbdf8a8b2c42.d: C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\lib.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\mutex.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\remutex.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\rwlock.rs
+
+D:\Projects Files\Node Projects\FlexPlugin\smtcPlugin\vendor\node-windows-smtc-monitor\target\release\deps\liblock_api-14c7dbdf8a8b2c42.rlib: C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\lib.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\mutex.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\remutex.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\rwlock.rs
+
+D:\Projects Files\Node Projects\FlexPlugin\smtcPlugin\vendor\node-windows-smtc-monitor\target\release\deps\liblock_api-14c7dbdf8a8b2c42.rmeta: C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\lib.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\mutex.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\remutex.rs C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\rwlock.rs
+
+C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\lib.rs:
+C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\mutex.rs:
+C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\remutex.rs:
+C:\Users\Michikora\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lock_api-0.4.14\src\rwlock.rs:

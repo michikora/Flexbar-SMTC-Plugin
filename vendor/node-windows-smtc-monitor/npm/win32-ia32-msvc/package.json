@@ -1,0 +1,38 @@
+{
+  "name": "@coooookies/windows-smtc-monitor-win32-ia32-msvc",
+  "version": "0.0.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "ia32"
+  ],
+  "main": "windows-smtc-monitor.win32-ia32-msvc.node",
+  "files": [
+    "windows-smtc-monitor.win32-ia32-msvc.node"
+  ],
+  "description": "Fetch Windows SMTC media player information and listen for media control events (e.g., play, pause, skip). Suitable for Windows 1809 and later.",
+  "keywords": [
+    "windows",
+    "media",
+    "smtc",
+    "monitor",
+    "napi",
+    "native",
+    "addon"
+  ],
+  "author": {
+    "name": "Coooookies",
+    "email": "admin@mitay.net",
+    "url": "https://mitay.net"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "https://github.com/LeagueTavern/node-windows-smtc-monitor"
+}

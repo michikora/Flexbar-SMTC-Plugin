@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "npm-run-all plugin:unlink plugin:link -p plugin:watch plugin:debug",
+    "plugin:watch": "rollup -c -w --watch.onEnd=\"npm run plugin:restart\"",
+    "plugin:unlink": "flexcli plugin unlink --uuid com.michikora.smtcplugin --silent",
+    "plugin:link": "flexcli plugin link --path com.michikora.smtcplugin.plugin --uuid com.michikora.smtcplugin --start false",
+    "plugin:restart": "flexcli plugin restart --uuid=com.michikora.smtcplugin",
+    "plugin:debug": "flexcli plugin debug --uuid=com.michikora.smtcplugin",
+    "plugin:validate": "flexcli plugin validate --path com.michikora.smtcplugin.plugin",
+    "plugin:pack": "flexcli plugin pack --path com.michikora.smtcplugin.plugin",
+    "plugin:install": "flexcli plugin install --path ./com.michikora.smtcplugin.flexplugin --force"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "glob": "^11.0.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^4.0.2"
+  },
+  "dependencies": {
+    "@coooookies/windows-smtc-monitor": "file:./vendor/node-windows-smtc-monitor",
+    "@eniac/flexdesigner": "^1.0.9",
+    "@napi-rs/canvas": "^1.0.0",
+    "native-sound-mixer": "^3.4.6-win",
+    "node-vibrant": "^4.0.4"
+  }
+}

@@ -1,0 +1,358 @@
+{
+    "name": "smtcPlugin",
+    "uuid": "com.michikora.smtcplugin",
+    "version": "v1.0.0",
+    "author": "Michikora",
+    "entry": "backend/plugin.cjs",
+    "description": "System Media Transport Controls integration for Flexbar",
+    "repo": "https://github.com/michikora/Flexbar-SMTC-Plugin",
+    "sdk": {
+        "version": "1.0.7"
+    },
+    "software": {
+        "minimumVersion": "1.3.0"
+    },
+    "os": [
+        {
+            "platform": "windows",
+            "minimumVersion": "10"
+        }
+    ],
+    "device": [
+        {
+            "name": "flexbar",
+            "version": "1.0.0"
+        }
+    ],
+    "configPage": "",
+    "keyLibrary": {
+        "title": "$PluginName",
+        "style": {
+            "icon": "mdi mdi-music-box"
+        },
+        "children": [
+          {
+              "title": "$NowPlaying.Title",
+              "tip": "$NowPlaying.Tip",
+              "cid": "com.michikora.smtcplugin.nowplaying",
+              "config": {
+                  "keyType": "default",
+                  "clickable": false,
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-music-note",
+                  "width": 600,
+                  "bgColor": "#000000",
+                  "fgColor": "#ffffff",
+                  "fontSize": 24,
+                  "font": "Arial",
+                  "flags": ["disable-common"]
+              },
+              "data": {
+                  "autoBgColor": true,
+                  "autoProgressFillColor": true,
+                  "autoTextColor": true,
+                  "manualBgColor": "#000000",
+                  "manualProgressFillColor": "#1DB954",
+                  "manualProgressBgColor": "#404040",
+                  "manualTextColor": "#FFFFFF",
+                  "fontMain": "\"Segoe UI\", -apple-system, BlinkMacSystemFont, Roboto, Arial, \"Meiryo\", \"Microsoft YaHei\", \"PingFang SC\", sans-serif",
+                  "fontTime": "\"Segoe UI\", -apple-system, BlinkMacSystemFont, Roboto, Arial, \"Meiryo\", \"Microsoft YaHei\", \"PingFang SC\", sans-serif"
+              }
+          },
+          {
+              "title": "$PlayPause.Title",
+              "tip": "$PlayPause.Tip",
+              "cid": "com.michikora.smtcplugin.playpause",
+              "config": {
+                  "keyType": "multiState",
+                  "clickable": true,
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-play-pause",
+                  "width": 120,
+                  "flags": ["disable-layout-sel", "disable-icon-sel", "disable-title-sel"],
+                  "multiStyle": [
+                      {
+                          "icon": "mdi mdi-play-pause",
+                          "bgColor": "#424242",
+                          "fgColor": "#FFFFFF"
+                      },
+                      {
+                          "icon": "mdi mdi-play",
+                          "bgColor": "#1DB954",
+                          "fgColor": "#FFFFFF"
+                      },
+                      {
+                          "icon": "mdi mdi-pause",
+                          "bgColor": "#F44336",
+                          "fgColor": "#FFFFFF"
+                      }
+                  ]
+              },
+              "data": {}
+          },
+          {
+              "title": "$Prev.Title",
+              "tip": "$Prev.Tip",
+              "cid": "com.michikora.smtcplugin.previous",
+              "config": {
+                  "keyType": "default",
+                  "clickable": true,
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-skip-previous",
+                  "bgColor": "#424242",
+                  "fgColor": "#FFFFFF",
+                  "width": 60,
+                  "flags": ["disable-layout-sel", "disable-icon-sel", "disable-title-sel"]
+              },
+              "data": {}
+          },
+          {
+              "title": "$Next.Title",
+              "tip": "$Next.Tip",
+              "cid": "com.michikora.smtcplugin.next",
+              "config": {
+                  "keyType": "default",
+                  "clickable": true,
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-skip-next",
+                  "bgColor": "#424242",
+                  "fgColor": "#FFFFFF",
+                  "width": 60,
+                  "flags": ["disable-layout-sel", "disable-icon-sel", "disable-title-sel"]
+              },
+              "data": {}
+          },
+          {
+              "title": "$Shuffle.Title",
+              "tip": "$Shuffle.Tip",
+              "cid": "com.michikora.smtcplugin.shuffle",
+              "config": {
+                  "keyType": "multiState",
+                  "clickable": true,
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-shuffle",
+                  "width": 60,
+                  "flags": ["disable-layout-sel", "disable-icon-sel", "disable-title-sel"],
+                  "multiStyle": [
+                      {
+                          "icon": "mdi mdi-shuffle",
+                          "bgColor": "#424242",
+                          "fgColor": "#555555"
+                      },
+                      {
+                          "icon": "mdi mdi-shuffle",
+                          "bgColor": "#424242",
+                          "fgColor": "#FFFFFF"
+                      },
+                      {
+                          "icon": "mdi mdi-shuffle",
+                          "bgColor": "#424242",
+                          "fgColor": "#1DB954"
+                      }
+                  ]
+              },
+              "data": {}
+          },
+          {
+              "title": "$Loop.Title",
+              "tip": "$Loop.Tip",
+              "cid": "com.michikora.smtcplugin.loop",
+              "config": {
+                  "keyType": "multiState",
+                  "clickable": true,
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-repeat",
+                  "width": 60,
+                  "flags": ["disable-layout-sel", "disable-icon-sel", "disable-title-sel"],
+                  "multiStyle": [
+                      {
+                          "icon": "mdi mdi-repeat",
+                          "bgColor": "#424242",
+                          "fgColor": "#555555"
+                      },
+                      {
+                          "icon": "mdi mdi-repeat",
+                          "bgColor": "#424242",
+                          "fgColor": "#FFFFFF"
+                      },
+                      {
+                          "icon": "mdi mdi-repeat",
+                          "bgColor": "#424242",
+                          "fgColor": "#1DB954"
+                      },
+                      {
+                          "icon": "mdi mdi-repeat-once",
+                          "bgColor": "#424242",
+                          "fgColor": "#1DB954"
+                      }
+                  ]
+              },
+              "data": {}
+          },
+          {
+              "title": "$Volume.Title",
+              "tip": "$Volume.Tip",
+              "cid": "com.michikora.smtcplugin.volume",
+              "config": {
+                  "keyType": "slider",
+                  "platform": ["windows"]
+              },
+              "style": {
+                  "icon": "mdi mdi-volume-high",
+                  "bgColor": "#000000",
+                  "width": 360,
+                  "flags": ["disable-bg-styles", "disable-icon-sel", "disable-layout-sel", "disable-func", "disable-common"],
+                  "slider": {
+                      "color": "#FFFFFF",
+                      "width": 260,
+                      "format": "",
+                      "min": 0,
+                      "max": 100,
+                      "decimals": 0
+                  }
+              },
+              "data": {}
+          }
+        ]
+    },
+    "local": {
+        "en": {
+            "PluginName": "SMTC Monitor",
+            "NowPlaying": {
+                "Title": "Now Playing",
+                "Tip": "Displays current track artwork, title, and progress.",
+                "UI": {
+                    "autoBgColor": "Auto Background Color",
+                    "autoProgressFillColor": "Auto Progress Fill Color",
+                    "autoTextColor": "Auto Text Color",
+                    "manualBgColor": "Manual Background Color",
+                    "manualProgressFillColor": "Manual Progress Fill Color",
+                    "manualProgressBgColor": "Manual Progress Background Color",
+                    "manualTextColor": "Manual Text Color",
+                    "fontMain": "Main Text Font",
+                    "fontTime": "Time Text Font"
+                }
+            },
+            "PlayPause": {
+                "Title": "Play / Pause",
+                "Tip": "Toggle media playback"
+            },
+            "Prev": {
+                "Title": "Previous Track",
+                "Tip": "Skip to previous track"
+            },
+            "Next": {
+                "Title": "Next Track",
+                "Tip": "Skip to next track"
+            },
+            "Shuffle": {
+                "Title": "Shuffle",
+                "Tip": "Toggle shuffle mode"
+            },
+            "Loop": {
+                "Title": "Loop",
+                "Tip": "Toggle repeat mode"
+            },
+            "Volume": {
+                "Title": "App Volume",
+                "Tip": "Control the independent volume of the active media application"
+            }
+        },
+        "ja": {
+            "PluginName": "SMTC メディアコントロール",
+            "NowPlaying": {
+                "Title": "再生中",
+                "Tip": "現在再生中のトラックのアートワーク、タイトル、進行状況を表示します。",
+                "UI": {
+                    "autoBgColor": "自動背景色を有効にする",
+                    "autoProgressFillColor": "自動進行状況バーの色を有効にする",
+                    "autoTextColor": "自動テキスト色を有効にする",
+                    "manualBgColor": "手動背景色",
+                    "manualProgressFillColor": "手動進行状況バーの色",
+                    "manualProgressBgColor": "手動進行状況バーの背景色",
+                    "manualTextColor": "手動テキスト色",
+                    "fontMain": "メインテキストフォント (Title/Artist)",
+                    "fontTime": "時間テキストフォント"
+                }
+            },
+            "PlayPause": {
+                "Title": "再生 / 一時停止",
+                "Tip": "メディアの再生状態を切り替えます"
+            },
+            "Prev": {
+                "Title": "前の曲",
+                "Tip": "前の曲にスキップします"
+            },
+            "Next": {
+                "Title": "次の曲",
+                "Tip": "次の曲にスキップします"
+            },
+            "Shuffle": {
+                "Title": "シャッフル",
+                "Tip": "シャッフル再生を切り替えます"
+            },
+            "Loop": {
+                "Title": "リピート",
+                "Tip": "リピート再生を切り替えます"
+            },
+            "Volume": {
+                "Title": "アプリの音量",
+                "Tip": "現在アクティブなメディアアプリケーションの音量を個別に制御します"
+            }
+        },
+        "zh-CN": {
+            "PluginName": "SMTC 媒体控制",
+            "NowPlaying": {
+                "Title": "正在播放",
+                "Tip": "显示当前曲目的封面、标题以及播放进度。",
+                "UI": {
+                    "autoBgColor": "启用自动背景色",
+                    "autoProgressFillColor": "启用自动进度条颜色",
+                    "autoTextColor": "启用自动文本颜色",
+                    "manualBgColor": "手动背景色",
+                    "manualProgressFillColor": "手动进度条颜色",
+                    "manualProgressBgColor": "手动进度条背景色",
+                    "manualTextColor": "手动文本颜色",
+                    "fontMain": "主文本字体 (Title/Artist)",
+                    "fontTime": "时间文本字体"
+                }
+            },
+            "PlayPause": {
+                "Title": "播放 / 暂停",
+                "Tip": "切换播放状态"
+            },
+            "Prev": {
+                "Title": "上一首",
+                "Tip": "切换到上一首歌曲"
+            },
+            "Next": {
+                "Title": "下一首",
+                "Tip": "切换到下一首歌曲"
+            },
+            "Shuffle": {
+                "Title": "随机播放",
+                "Tip": "切换随机播放状态"
+            },
+            "Loop": {
+                "Title": "循环播放",
+                "Tip": "切换列表/单曲循环状态"
+            },
+            "Volume": {
+                "Title": "独立音量",
+                "Tip": "独立调节当前发声应用在系统混音器中的音量"
+            }
+        }
+    }
+}
